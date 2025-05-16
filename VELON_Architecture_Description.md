@@ -1,0 +1,1 @@
+# Detailed breakdown of all services, data flow, modules, agents, and infrastructure

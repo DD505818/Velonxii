@@ -1,0 +1,5 @@
+## sample risk rule
+- name: size_error
+  trigger: on_order
+  expr: "order.qty > preset_qty * 1.1"
+  action: [reject, alert]

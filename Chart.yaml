@@ -1,0 +1,9 @@
+apiVersion: v2
+appVersion: 0.4.3
+description: Helm chart for VelonX12 stack
+maintainers:
+- email: example@example.com
+  name: DD505818
+name: velonx12
+type: application
+version: 0.4.3

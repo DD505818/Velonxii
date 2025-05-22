@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "velonx12.fullname" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "velonx12.name" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "velonx12.name" . }}
+    spec:
+      containers:
+      - name: velonx12
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        ports:
+        - containerPort: 3001
+        resources: {{- toYaml .Values.resources | nindent 10 }}

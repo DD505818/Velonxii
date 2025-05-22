@@ -1,0 +1,2 @@
+After installation run:
+  helm status {{ .Release.Name }} -n {{ .Release.Namespace }}
